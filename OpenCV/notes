@@ -1,0 +1,71 @@
+Any single channel array should belong to one of following data types.
+
+    CV_8U - 8 bit unsigned integer
+    CV_8S - 8 bit signed integer
+    CV_16U - 16 bit unsigned integer
+    CV_16S - 16 bit signed integer
+    CV_32S - 32 bit signed integer
+    CV_32F - 32 bit floating point number
+    CV_64F - 64 bit float floating point number
+
+
+
+We can define all of above data types for multi channel arrays. OpenCV supports up to 512 channels. Here I am going to show you how to define CV_8U data type for multi channel arrays.
+
+    CV_8UC1 - Single channel array with 8 bit unsigned integers which is exactly same as CV_8U
+    CV_8UC2 - 2 channel array with 8 bit unsigned integers
+    CV_8UC3 - 3 channel array with 8 bit unsigned integers
+    CV_8UC4 - 4 channel array with 8 bit unsigned integers
+    CV_8UC(n) - n channel array with 8 bit unsigned integers (n can be from 1 to 512) )
+
+
+ Mat::Mat(int rows, int cols, int type, const Scalar& s)
+
+This constructor will create a Mat object with specified number of rows and number of cols and initialize each element with the value given in s.
+
+    rows - Number of rows in the 2D array ( i.e. - height of the image in pixels )
+    cols - Number of columns in the 2D array ( i.e. - width of the image in pixels )
+    type - Data type of the 2D array which specify the depth and the data type of each element in each channel and number of channels. (Of course, if number of channels is more than 1, 2D array becomes 3D array). More details of data types can be found in the OpenCV C++ API. Possible values for this argument are,
+        CV_8UC1
+        CV_8UC2
+        CV_8UC3
+        CV_8UC4
+        CV_8UC(n)
+         
+        CV_8SC1
+        CV_8SC2
+        CV_8SC3
+        CV_8SC4
+        CV_8SC(n)
+         
+        CV_16UC1
+        CV_16UC2
+        CV_16UC3
+        CV_16UC4
+        CV_16UC(n)
+         
+        CV_16SC1
+        CV_16SC2
+        CV_16SC3
+        CV_16SC4
+        CV_16SC(n)
+         
+        CV_32SC1
+        CV_32SC2
+        CV_32SC3
+        CV_32SC4
+        CV_32SC(n)
+         
+        CV_32FC1
+        CV_32FC2
+        CV_32FC3
+        CV_32FC4
+        CV_32FC(n)
+         
+        CV_64FC1
+        CV_64FC2
+        CV_64FC3
+        CV_64FC4
+        CV_64FC(n)
+    s - Initialize each array element (pixels) with the value given by s for each channel. 
+

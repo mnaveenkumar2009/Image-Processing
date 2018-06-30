@@ -1,0 +1,1 @@
+g++ -ggdb facedetect.cpp -o facedetect `pkg-config --cflags --libs opencv`

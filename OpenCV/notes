@@ -69,3 +69,26 @@ This constructor will create a Mat object with specified number of rows and numb
         CV_64FC(n)
     s - Initialize each array element (pixels) with the value given by s for each channel. 
 
+Size of image:
+
+You can use rows and cols:
+
+cout << "Width : " << src.cols << endl;
+cout << "Height: " << src.rows << endl;
+
+or size():
+
+cout << "Width : " << src.size().width << endl;
+cout << "Height: " << src.size().height << endl;
+
+
+Resize
+
+Size size(100,100);//the dst image size,e.g.100x100
+Mat dst;//dst image
+Mat src;//src image
+resize(src,dst,size);//resize image
+
+TEXT:
+
+putText(image, "opencv-hub", Point(5,100), FONT_HERSHEY_DUPLEX, 1, Scalar(0,143,143), 2);
